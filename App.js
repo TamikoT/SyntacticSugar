@@ -1,15 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Sugar from './views/components/Sugar'
+const Stack = createStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello, world!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Sugar"
+          component={HomeScreen}
+          options={{ title: 'Welcome' }}
+        />
+        <Stack.Screen name="Profile" component={Sugar} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+const HomeScreen = ({navigation}) => {
+  return (
+    <Button
+      title="Syntactic"
+      onPress={() =>
+        navigation.navigate('Profile')
+      }
+    />
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -19,3 +40,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
