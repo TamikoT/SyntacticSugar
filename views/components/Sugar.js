@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text } from 'react-native';
+import TodoList from './TodoList';
+import './Sugar.css';
 
-const Sugar = () => {
-  return <Text>Sugar</Text>;
-}
+const Sugar = () => (
+    <TodoList />
+);
 
 export default Sugar

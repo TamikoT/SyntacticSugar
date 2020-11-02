@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: linear-gradient(#e66465, #9198e5);
+    font-size: 1.1rem;
+    font-family: "Quicksand", sans-serif;
+    height: 100%;
+}
