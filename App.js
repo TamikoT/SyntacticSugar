@@ -1,14 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet, Button } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Sugar from './views/components/Sugar'
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={MyTheme}>
       <Stack.Navigator>
         <Stack.Screen
           name="Sugar"
@@ -39,6 +39,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   }
 });
+
+const MyTheme = {
+  ...DarkTheme,
+  dark: true,
+  colors: {
+    ...DefaultTheme.colors,
+    background: 'rgb(255, 255, 255, 0.0)',
+  },
+};
 
 
 

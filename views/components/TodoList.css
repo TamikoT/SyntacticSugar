@@ -28,3 +28,37 @@
     margin-top: 0.2 rem
 }
 
+.TodoList-toggle {
+    text-align: right;
+}
+
+.TodoList-toggle button {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 3 1.3rem;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.4s ease-out;
+    outline: none;
+}
+
+.TodoList-toggle button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.TodoList-buttondesc {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.TodoList-icons {
+    vertical-align: middle;
+}
